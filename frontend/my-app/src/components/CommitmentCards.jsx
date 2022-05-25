@@ -14,6 +14,7 @@ export default function CommitmentCard({ commitments }) {
       rounded='20px'
       boxShadow='sm'
       bg='gray.200'
+      margin='8px'
     >
       <Text>{ `Id: ${commitments.id}`}</Text>
       <Text>{ `Nome: ${commitments.name}` }</Text>
