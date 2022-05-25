@@ -11,10 +11,14 @@ export default function AddTaskToAgenda() {
         <Input
           variant='filled'
           placeholder='Nome'
-          />
+          onChange={({ target }) => setName(target.value)}
+          value={name}
+        />
         <Input 
           variant='filled'
           placeholder='Título'
+          onChange={({ target }) => setTitle(target.value)}
+          value={title}
         />
       </HStack>
       <Button ml='10px'>Add task</Button>
