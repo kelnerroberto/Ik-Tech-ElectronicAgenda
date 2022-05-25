@@ -8,9 +8,18 @@ const getAllCommitments = async (_req, res) => {
 };
 
 const postNewCommitment = async (req, res) => {
-  const { name, title } = req.body;
+  try {
+    const { name, title } = req.body;
+    
+    await commitmentService.postNewCommitment(name, title);
+
+    return res.status(201).json({ message: 'Commitment created successfully' });
+  } catch (err) {
+    return res.status(500).json({ error: 'Internal Server Error' });
+  }
 }
 
 module.exports = {
   getAllCommitments,
+  postNewCommitment,
 };
