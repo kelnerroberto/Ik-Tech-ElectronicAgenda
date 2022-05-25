@@ -1,10 +1,12 @@
 import { Button, Flex, HStack, Input } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { CommitmentContext } from "../context/CommitmentProvider";
 import { POST_NEW_COMMITMENT } from "../services/commitmentService";
 
 export default function AddTaskToAgenda() {
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
+  const { haveToRender, setHaveToRender } = useContext(CommitmentContext);
 
   const createNewCommitment = async () => {
     try {
@@ -14,7 +16,7 @@ export default function AddTaskToAgenda() {
       }
 
       await POST_NEW_COMMITMENT(body);
-
+      setHaveToRender(true);
     } catch (err) {
       console.log(err.message);
     }
