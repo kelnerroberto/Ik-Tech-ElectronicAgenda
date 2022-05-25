@@ -6,6 +6,13 @@ const getAllCommitments = async () => {
   return commitments;
 };
 
+const postNewCommitment = async (name, title) => {
+  const newCommitment = await Commitment.create({ name, title });
+
+  return newCommitment;
+}
+
 module.exports = {
   getAllCommitments,
+  postNewCommitment,
 };
