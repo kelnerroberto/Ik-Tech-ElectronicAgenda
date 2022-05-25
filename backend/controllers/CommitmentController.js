@@ -15,7 +15,8 @@ const postNewCommitment = async (req, res) => {
 
     return res.status(201).json({ message: 'Commitment created successfully' });
   } catch (err) {
-    return res.status(500).json({ error: 'Internal Server Error' });
+    console.log(err);
+    return res.status(500).json({ error: err });
   }
 }
 
