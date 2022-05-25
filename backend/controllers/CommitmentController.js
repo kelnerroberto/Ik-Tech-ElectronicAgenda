@@ -1,9 +1,10 @@
 const commitmentService = require('../services/CommitmentService');
+const { formatMap } = require('./helpers/split');
 
 const getAllCommitments = async (req, res) => {
   const commitments = await commitmentService.getAllCommitments();
-
-  return res.status(200).json(commitments);
+  const formated = formatMap(commitments)
+  return res.status(200).json(formated);
 };
 
 module.exports = {

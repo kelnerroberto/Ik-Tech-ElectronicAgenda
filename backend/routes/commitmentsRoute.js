@@ -3,7 +3,7 @@ const commitmentController = require('../controllers/CommitmentController');
 
 const commitment = Router();
 
-commitment.get('/home', commitmentController.getAllCommitments);
+commitment.get('/all', commitmentController.getAllCommitments);
 
 module.exports = {
   commitment,

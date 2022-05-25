@@ -1,7 +1,7 @@
 const Commitment = (sequelize, DataTypes) => {
   const Commitment = sequelize.define("Commitment", {
-    fullName: DataTypes.STRING,
-    email: DataTypes.STRING,
+    name: DataTypes.STRING,
+    title: DataTypes.STRING,
   });
 
   return Commitment;
