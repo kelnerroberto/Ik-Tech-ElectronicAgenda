@@ -6,6 +6,8 @@ const app = express();
 
 app.use(cors());
 
+app.use(express.json());
+
 app.use('/commitments', commitment.commitment);
 
 module.exports = app;

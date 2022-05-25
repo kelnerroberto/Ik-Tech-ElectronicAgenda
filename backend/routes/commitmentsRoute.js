@@ -5,6 +5,8 @@ const commitment = Router();
 
 commitment.get('/all', commitmentController.getAllCommitments);
 
+commitment.post('/add', commitmentController.postNewCommitment);
+
 module.exports = {
   commitment,
 }
