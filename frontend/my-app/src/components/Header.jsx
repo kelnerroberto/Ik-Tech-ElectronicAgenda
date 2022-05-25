@@ -42,7 +42,7 @@ export default function AddTaskToAgenda() {
         ml='10px'
         onClick={() => createNewCommitment()}
       >
-          Add task
+          Add commitment
       </Button>
     </Flex>
   )
