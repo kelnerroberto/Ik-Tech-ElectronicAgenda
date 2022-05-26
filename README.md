@@ -34,7 +34,9 @@ Assim que terminar a instalação você pode entrar no diretório do projeto e e
 
 Rodar o comando `npm install` em cada pasta fará com que as dependências, tanto do backend quanto do frontend, sejam instaladas na sua máquina local (uma vez que o arquivo node_modules é ignorado pelo .gitignore).
 
-Para o backend, você deverá entrar na pasta `backend` e rodar o comando `npx sequelize db:create`, para que o banco de dados seja criado no seu servidor MySql local. Assim que o fizer, também poderá ser necessário utilizar o comando `npx sequelize db:migrate`, para que o sequelize execute as migrations do projeto.
+## Importante:
+
+Para o backend, você deverá entrar na pasta `backend` e rodar o comando `npx run db:reset`, para que o banco de dados seja criado no seu servidor MySql local e para que o sequelize execute as migrations do projeto, bem como os seeders.
 
 Para o bom funcionamento do projeto backend, é necessário utilizar um arquivo `.env` na pasta `backend`, mas não se preocupe, existe um arquivo `.env.exemple` no projeto, onde você poderá se guiar, então neste caso é só modificar os valores deste arquivo para 'dar match' com sua conexão MySQL.
 
