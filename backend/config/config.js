@@ -16,10 +16,14 @@ module.exports = {
     dialect: 'mysql',
   },
   production: {
-    username: process.env.MYSQL_USER || 'root',
-    password: process.env.MYSQL_PASSWORD || '',
-    database: process.env.MYSQL_DATABASE || 'electronic_agenda',
-    host: process.env.HOSTNAME,
-    dialect: 'mysql',
+    use_env_variable: 'DATABASE_URL',
+    dialect: 'postgres',
+    protocol: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   },
 };
