@@ -38,7 +38,7 @@ Para o backend, você deverá entrar na pasta `backend` e rodar o comando `npx s
 
 Para o bom funcionamento do projeto backend, é necessário utilizar um arquivo `.env` na pasta `backend`, mas não se preocupe, existe um arquivo `.env.exemple` no projeto, onde você poderá se guiar, então neste caso é só modificar os valores deste arquivo para 'dar match' com sua conexão MySQL.
 
-Após a instalação das dependências, você poderá rodar o projeto rodando o comando `npm start` dentro da pasta `/backend` e dentro da pasta `/frontend/my_app`.
+Após a instalação das dependências, você poderá rodar o projeto utilizando o comando `npm start` dentro da pasta `/backend` e dentro da pasta `/frontend/my_app`.
 
 ### Atenção: Para que ambos se integrem, é necessário ter um terminal rodando o projeto de backend em separado com o de frontend, ou seja, pode ser necessário abrir dois terminais.
 
